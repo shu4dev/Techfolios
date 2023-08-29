@@ -23,16 +23,6 @@
     { "name": "Japanese" },
     { "name": "Chinese"}
   ],
-  "skills": [
-    {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Python", "Selenium", "WebDriver"]
-    },
-    {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Git/GitHub", "gcc/g++", "Windows 11/10", "Unix", "Vim", "Eclipse", "VScode" ]
-    }
-  ],
   "education": [
     {
       "institution": "University of Hawaii, Honolulu, HI",
@@ -44,12 +34,7 @@
       ]
     }
   ],
-  "leadership" : [
-    {
-      "organization" : "PANDA"
-    }
-  ],
-  "work": [
+   "work": [
     {
       "company": "University of Hawaii at Manoa",
       "position": "Reserch Asistant",
@@ -62,6 +47,21 @@
         "Host and execute reaserch result on offical website"
       ]
     },
+  ],
+  "leadership" : [
+    {
+      "organization" : "PANDA"
+    }
+  ],
+    "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Java", "Javascript", "Python", "Selenium", "WebDriver"]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "MacOS", "Git/GitHub", "gcc/g++", "Windows 11/10", "Unix", "Vim", "Eclipse", "VScode" ]
+    }
   ],
   "references": [
     {
