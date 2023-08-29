@@ -58,19 +58,6 @@
       ]
     },
   ],
-  "volunteer": [
-    {
-      "organization": "PANDA (Programming AND Algorithms)",
-      "website": "https://acmmanoa.org/panda/",
-      "position": "Officer",
-      "startDate": "2023-08-30",
-      "endDate": "Present",
-      "highlights": [
-        "tutor members to generate solutions and the potential optimization by using various data structures",
-        "provide mock technical interview to memebers to improve their coding skills"
-      ]
-    },
-  ],
   "references": [
     {
       "name": "Available upon request"
