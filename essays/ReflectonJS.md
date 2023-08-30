@@ -1,19 +1,17 @@
 ---
 layout: essay
 type: essay
-title: "Igniting the fire"
+title: "Reflect on Javascript"
 # All dates must be YYYY-MM-DD format!
-date: 2015-08-26
+date: 2023-08-29
 published: true
 labels:
-  - Software Engineering
+  - JavaScript
   - Learning
 ---
 
-<img width="100px" class="rounded float-start pe-4" src="../img/igniting/paintbrushes.jpg">
+On August 6, 1991, the first website was created by Tim Berners-Lee. Since then, the World Wide Web has undergone a remarkable evolution, transforming the way we communicate, access information, and conduct business. JavaScript has taken this evolution to the next level. In my opinion, it opens up infinite possibilities on the HTML canvas. It has the power to change a simple white canvas into a calculator, a map, a game, or anything else one can imagine. As someone who has prior experience with JavaScript in ES5, rather than considering ES6 as an entirely new language, it feels more like an update to the existing one. 
 
-Ever since I first grasped a paintbrush, I’ve always been eager to learn about design. Design is such a complex concept. For example, when looking at abstract art, its meaning can be completely different for different people. It motivates a person to think thoughtfully and has the potential to submerge them in a sea of imagination. It’s that special relationship between the viewer and the art that makes something as technical as software engineering interesting to me.
+As a potential future software engineer, one of my key responsibilities will be ensuring seamless communication through various media. To be competent in fulfilling this duty, mastering JavaScript is a necessity. Moreover, as previously mentioned, JavaScript unlocks numerous possibilities for web development. Thus, acquiring proficiency in JavaScript is essential for creating dynamic and interactive websites that captivate users in innovative ways. 
 
-I never used to think that design and technology went hand in hand.  Thus, learning about software engineering and the role of design has been incredibly interesting to me. Design, implementation, and management are just some of the many things I wish to learn more about. Good art, in a way, makes a person question it. They become joined in the idea of visualization – where captivation meets inspiration.
-
-I am now starting to take a Software Engineering class. I hope to learn a lot through the course, but I know it will be just the beginning of my journey. By the time I’m done with it, I hope I’ve learned enough to take the next step in my life as a developer. But until then, my fire will keep on burning.
+When it comes to mastering JavaScript, practice becomes crucial. The professor's decision to incorporate Workouts of the Day (WODs) for coding practice is a strategy I find both challenging and beneficial. While these time-bound exercises might induce stress, it is precisely this pressure that enhances our coding abilities. The mild stress under a time constraint compels my brain to function optimally. Of course, there might be instances when I do not arrive at the best solution and fail a WOD. However, I firmly believe that consistent practice with WODs will inevitably refine my coding skills to a level suitable for technical interviews.
