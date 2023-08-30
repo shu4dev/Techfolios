@@ -49,28 +49,14 @@
   ],
  "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
+      "organization": "PANDA (Programming AND Algorithms)",
+      "website": "https://acmmanoa.org/panda/",
+      "position": "Officer",
+      "startDate": "2023-08-22",
       "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Worked among members to generate solutions and the potential optimization by using various data structures.",
+        "Applied and further optimized solutions with the characteristics of different programming languages."
       ]
     }
   ],
