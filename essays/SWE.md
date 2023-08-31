@@ -4,14 +4,18 @@ type: essay
 title: "Reflect on Javascript"
 # All dates must be YYYY-MM-DD format!
 date: 2023-08-30
-published: true
+published: false
 labels:
   - Software Engineering
   - Learning
 ---
+Disassemble the world
+	 When I was a kid, I liked to disassemble everything I saw, from toys to shelves. It was an annoying habit because I didn’t have the ability to assemble it back completely. Therefore, it causes many troubles to my parents and teacher in kindergarten. On the other hand, math and science are my favorite subjects in school. My teacher recommended that I become an engineer in the future. Engineer? That sounds fun.
 
-On August 6, 1991, the first website was created by Tim Berners-Lee. Since then, the World Wide Web has undergone a remarkable evolution, transforming the way we communicate, access information, and conduct business. JavaScript has taken this evolution to the next level. In my opinion, it opens up infinite possibilities on the HTML canvas. It has the power to change a simple white canvas into a calculator, a map, a game, or anything else one can imagine. As someone who has prior experience with JavaScript in ES5, rather than considering ES6 as an entirely new language, it feels more like an update to the existing one. 
+There are numerous types of engineers, which one do I like? After a deeper research on different careers, I narrowed down my choices to physics related subjects,specifically, electrical, astrophysics and computer engineering. Until high school, I started to learn coding. My first coding language was python. I was writing a program to control the arduino robots. Although it is just a simple program, it inspires me of which engineering path I want to follow. 
 
-As a potential future software engineer, one of my key responsibilities will be ensuring seamless communication through various media. To be competent in fulfilling this duty, mastering JavaScript is a necessity. Moreover, as previously mentioned, JavaScript unlocks numerous possibilities for web development. Thus, acquiring proficiency in JavaScript is essential for creating dynamic and interactive websites that captivate users in innovative ways. 
-
-When it comes to mastering JavaScript, practice becomes crucial. The professor's decision to incorporate Workouts of the Day (WODs) for coding practice is a strategy I find both challenging and beneficial. While these time-bound exercises might induce stress, it is precisely this pressure that enhances our coding abilities. The mild stress under a time constraint compels my brain to function optimally. Of course, there might be instances when I do not arrive at the best solution and fail a WOD. However, I firmly believe that consistent practice with WODs will inevitably refine my coding skills to a level suitable for technical interviews.
+“I like coding I want write code for my job”
+	Therefore, I didn't choose any engineering major but instead majored in computer science. I want to be a software engineer in the future. As I dive into the career, I understand that writing code is only 30% of my job. The rest 70% consists of communication, collaboration, and other soft skills. Beside improving my coding skills, I also need to learn how to communicate and collaborate with other software engineers.
+	I like to disassemble things related to software engineering? 
+	My disassembly habits transfer from physical object to conceptual object. Instead of disassembling toys, I disassemble tasks or questions that software engineers are trying to solve, and assemble these small parts back together to complete the original task. I didn’t lose my disassemble habits, instead transferring and complementing it with the ability to reassemble back. 
+	Starting from weird and annoying habits, I gradually found the fittest career and eventually chose to be a software engineer. Like I mentioned in the previous paragraph, as I keep improving my coding skills I would also like to gain some soft skills such as communication, collaboration, and even presenting skills. With my weird habits and all the skills that I will be gaining, I am sure that I will be ready to be competent for a software engineering position in the industry. 
