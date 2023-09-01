@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/proteinfolding.jpg
+image: img/database.jpg
 title: "Database"
 date: 2022
 published: true
