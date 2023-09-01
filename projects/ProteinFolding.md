@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/proteinfolding.jpg
+image: img/proteinfolding.png
 title: "Protein Folding"
 date: 2022
 published: true
