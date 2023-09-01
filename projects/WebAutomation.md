@@ -17,7 +17,7 @@ I created this Python script for my dad to help him reserve a badminton court. A
 This script is written in Python and utilizes a library called Selenium, which can detect elements in HTML and interact with them.
 <hr>
 
-```cpp
+```python
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
