@@ -60,4 +60,27 @@ def getTime():
           "\nIntend to reserve for ", year, "/", month,"/", day)
     return str(year), str(month), str(day)
 ```
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+
+Additionally, there captcha section where I use another library called  “twocaptcha” to bypass it 
+
+```python
+
+    captcha_img = driver.find_element("xpath", "/html/body/table[2]/tbody/tr/td/form/table/tbody/tr[3]/td[2]/img")
+    captcha_img.screenshot('your_path')
+
+
+    api_key = os.getenv('APIKEY_2CAPTCHA', 'your_key')
+
+    solver = TwoCaptcha(api_key)
+
+    try:
+        result = solver.normal('your_path')
+
+    except Exception as e:
+        print(e)
+    else:
+        code = result['code']
+        return code
+```
+
+Source: <a href="https://github.com/shu4dev/WebAutomation/edit/main/BotDemo.py"><i class="large github icon "></i>WebAutomation</a>
