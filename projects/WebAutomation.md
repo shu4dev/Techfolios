@@ -34,4 +34,30 @@ driver = webdriver.Chrome(
 service = service,
 options = options)
 ```
+
+To ensure this script runs at the time we want I write another getTime() function
+
+```python
+def getTime():
+    now        = datetime.now()
+    year       = int(now.strftime("%Y"))
+    month      = int(now.strftime("%m"))
+    TodayDay   = now.strftime("%d")
+    day        = int(now.strftime("%d"))
+    monthrange = calendar.monthrange(year, month)
+    if day + 8 > monthrange[1]:
+        month = str(month + 1).zfill(2)
+        day   = str(day + 8 - monthrange[1]).zfill(2)
+    elif day + 8 > monthrange[1] and month == 12:
+        year  = str(year + 1) 
+        month = str(1).zfill(2)
+        day   = str(day + 8 - monthrange[1]).zfill(2)
+    else:
+        year  = str(year).zfill(4)
+        month = str(month).zfill(2)
+        day   = str(day + 8).zfill(2)
+    print("Today is ", year, "/", month,"/", TodayDay, 
+          "\nIntend to reserve for ", year, "/", month,"/", day)
+    return str(year), str(month), str(day)
+```
 Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
