@@ -24,6 +24,10 @@ In order to score, the following condition must be satisfied:
 
 # Code
 
+# example
+
+img/example.png
+
 To achieve this goal, we use recursive backtracking.
 ```python
 def ProteinFolding(Acidseq, grid, Curnum, y, x, pts, resgrid):
