@@ -11,10 +11,9 @@ labels:
   - WebDriver
 summary: "An automation script for particular website"
 ---
+# Introduction
+I created this Python script for my dad to help him reserve a badminton court. At the gym he frequents, court reservations must be made online through their website. The reservation for next week becomes available at midnight. My dad had difficulty operating the computer quickly enough to secure a court, so this script is designed to assist him.
 
-This is a python script I created for my dad to reserve nadmin
-
-To give you a flavor of the game, here is an excerpt from one run:
 
 <hr>
 
