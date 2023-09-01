@@ -58,6 +58,8 @@ int main(int argc, char *argv[])
             printf("\nquit:     Quit the program\n");
             printf("Enter one of the option: ");
 ```
+
+img/interface.png
 # record
 
 For each record we store in the system, we create a C struct that holds data such as account numbers and names.
