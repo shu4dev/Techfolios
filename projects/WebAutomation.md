@@ -62,7 +62,7 @@ def getTime():
 ```
 
 Additionally, there captcha section where I use another library called  “twocaptcha” to bypass it 
-<img class="img-fluid" src="..img/login.png">
+<img class="img-fluid" src="../img/login.png">
 
 ```python
 
