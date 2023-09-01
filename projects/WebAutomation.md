@@ -14,7 +14,7 @@ summary: "An automation script for particular website"
 # Introduction
 I created this Python script for my dad to help him reserve a badminton court. At the gym he frequents, court reservations must be made online through their website. The reservation for next week becomes available at midnight. My dad had difficulty operating the computer quickly enough to secure a court, so this script is designed to assist him.
 
-
+This script is written in Python and utilizes a library called Selenium, which can detect elements in HTML and interact with them.
 <hr>
 
 <pre>
