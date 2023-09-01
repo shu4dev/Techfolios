@@ -4,10 +4,9 @@ type: project
 image: img/proteinfolding.jpg
 title: "Protein Folding"
 date: 2022
-published: false
+published: true
 labels:
   - Python
-  - 
   - WebDriver
 summary: "A script that find the best way the fold protein"
 ---
