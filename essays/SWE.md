@@ -14,6 +14,7 @@ When I was a child, I had a weird habit for disassembling everything in my sight
 The field of engineering encompasses numerous specialties. After some experiences in different engineering, I  eventually narrowed down my choices to physics-related careers, specifically electrical engineering, astrophysics, and computer engineering. It was during high school that I began my journey into coding, with Python being my first programming language. I wrote programs to control Arduino robots, and although they were relatively simple, this experience ignited a clear path in my mind regarding my future engineering pursuits.
  
 ## I enjoy coding, I want to write code for my profession.
+
 As a result, I decided not to pursue a general engineering major but instead pursue a computer science degree. I want to become a software engineer. I realized that coding represented only 30% of the job, with the remaining 70% consisting of tasks such as communication, collaboration, and the development of other soft skills. Therefore, I recognized the importance of enhancing not only my coding abilities but also my capacity to communicate and collaborate effectively with fellow software engineers. 
 
 ## Do I apply my disassembling habits to software engineering?
