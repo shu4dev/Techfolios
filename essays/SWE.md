@@ -13,7 +13,7 @@ When I was a child, I had a weird habit for disassembling everything in my sight
 The field of engineering encompasses numerous specialties. After some experiences in different engineering, I  eventually narrowed down my choices to physics-related careers, specifically electrical engineering, astrophysics, and computer engineering. It was during high school that I began my journey into coding, with Python being my first programming language. I wrote programs to control Arduino robots, and although they were relatively simple, this experience ignited a clear path in my mind regarding my future engineering pursuits.
  
 
-“I like coding I want write code for my job”
+## I like coding I want write code for my job
 	Therefore, I didn't choose any engineering major but instead majored in computer science. I want to be a software engineer in the future. As I dive into the career, I understand that writing code is only 30% of my job. The rest 70% consists of communication, collaboration, and other soft skills. Beside improving my coding skills, I also need to learn how to communicate and collaborate with other software engineers.
 	I like to disassemble things related to software engineering? 
 	My disassembly habits transfer from physical object to conceptual object. Instead of disassembling toys, I disassemble tasks or questions that software engineers are trying to solve, and assemble these small parts back together to complete the original task. I didn’t lose my disassemble habits, instead transferring and complementing it with the ability to reassemble back. 
