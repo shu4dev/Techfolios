@@ -1,86 +1,61 @@
 ---
 layout: project
 type: project
-image: img/seleniumlogo.png
-title: "Website Automation"
+image: img/proteinfolding.jpg
+title: "Protein Folding"
 date: 2022
 published: false
 labels:
   - Python
-  - Selenium
+  - 
   - WebDriver
-summary: "An automation script for particular website"
+summary: "A script that find the best way the fold protein"
 ---
 # Introduction
-I created this Python script for my dad to help him reserve a badminton court. At the gym he frequents, court reservations must be made online through their website. The reservation for next week becomes available at midnight. My dad had difficulty operating the computer quickly enough to secure a court, so this script is designed to assist him.
+This Python script is dedicated to a research project during the summer. The goal of this project is to find the best way to fold proteins by using a hydrophobic-polar protein folding model. My group mates and I utilize Python and algorithms to assist in this project to find the optimal protein folding solution. 
 
-This script is written in Python and utilizes a library called Selenium, which can detect elements in HTML and interact with them.
-<hr>
+# hydrophobic-polar protein folding model
 
+In simple terms, this model is a string that contains 0s and 1s. Between each number, they are connected, and the change in the direction of the next number is considered a fold.
+
+In order to score, the following condition must be satisfied:
+
+1. The number must be next to each other without a connection
+2. Both number must be 0
+
+# Code
+
+To achieve this goal, we use recursive backtracking.
 ```python
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from twocaptcha import TwoCaptcha
-import time
-import os 
-import calendar
-from datetime import datetime
+def ProteinFolding(Acidseq, grid, Curnum, y, x, pts, resgrid):
+    global Maxpts
+    global y_move
+    global x_move
+    global direc
+    if Curnum == len(Acidseq):
+        if pts > Maxpts:
+            Maxpts = pts
+            CopyArray(grid, resgrid, len(grid))
+        return resgrid
+    
+    for i in range(4):
+        
+        y_prog = y + y_move[i]
+        x_prog = x + x_move[i]
+        
+        y_new = y_prog + y_move[i]
+        x_new = x_prog + x_move[i]
 
-options = Options()
-service = Service( executable_path="your_path")
-options.add_experimental_option("detach", True)
-driver = webdriver.Chrome( 
-service = service,
-options = options)
+        if isValid(grid, y_new, x_new):
+
+            grid[y_prog][x_prog] = symbol[i]
+            grid[y_new][x_new] = Acidseq[Curnum]
+            pts_new = pts + Checkpts(grid, y_new, x_new, direc[i])
+            CopyArray(resgrid, ProteinFolding(Acidseq, grid, Curnum + 1, y_new, x_new, pts_new, resgrid), len(grid))
+            grid[y_new][x_new] = " "
+            grid[y_prog][x_prog] = " "
+
+    return resgrid
 ```
 
-To ensure this script runs at the time we want I write another getTime() function
-
-```python
-def getTime():
-    now        = datetime.now()
-    year       = int(now.strftime("%Y"))
-    month      = int(now.strftime("%m"))
-    TodayDay   = now.strftime("%d")
-    day        = int(now.strftime("%d"))
-    monthrange = calendar.monthrange(year, month)
-    if day + 8 > monthrange[1]:
-        month = str(month + 1).zfill(2)
-        day   = str(day + 8 - monthrange[1]).zfill(2)
-    elif day + 8 > monthrange[1] and month == 12:
-        year  = str(year + 1) 
-        month = str(1).zfill(2)
-        day   = str(day + 8 - monthrange[1]).zfill(2)
-    else:
-        year  = str(year).zfill(4)
-        month = str(month).zfill(2)
-        day   = str(day + 8).zfill(2)
-    print("Today is ", year, "/", month,"/", TodayDay, 
-          "\nIntend to reserve for ", year, "/", month,"/", day)
-    return str(year), str(month), str(day)
-```
-
-Additionally, there captcha section where I use another library called  “twocaptcha” to bypass it 
-
-```python
-
-    captcha_img = driver.find_element("xpath", "/html/body/table[2]/tbody/tr/td/form/table/tbody/tr[3]/td[2]/img")
-    captcha_img.screenshot('your_path')
-
-
-    api_key = os.getenv('APIKEY_2CAPTCHA', 'your_key')
-
-    solver = TwoCaptcha(api_key)
-
-    try:
-        result = solver.normal('your_path')
-
-    except Exception as e:
-        print(e)
-    else:
-        code = result['code']
-        return code
-```
-
-Source: <a href="https://github.com/shu4dev/WebAutomation/edit/main/BotDemo.py"><i class="large github icon "></i>WebAutomation</a>
+Source: <a href="https://github.com/shu4dev/ProteinFolding"><i class="large github icon "></i>Protein Folding</a>
