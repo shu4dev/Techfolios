@@ -4,7 +4,7 @@ type: project
 image: img/seleniumlogo.png
 title: "Website Automation"
 date: 2022
-published: false
+published: true
 labels:
   - Python
   - Selenium
