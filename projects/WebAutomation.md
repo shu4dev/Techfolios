@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/seleniumlogo.png
 title: "Website Automation"
 date: 2022
 published: false
@@ -11,8 +11,6 @@ labels:
   - WebDriver
 summary: "An automation script for particular website"
 ---
-
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
 
 Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
 
