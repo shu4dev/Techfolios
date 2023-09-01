@@ -10,9 +10,9 @@ labels:
   - Learning
 ---
 When I was a child, I had a weird habit for disassembling everything in my sight, from toys to shelves. This habit became rather destructive since I lacked the ability to reassemble things properly. Consequently, it caused considerable trouble for both my parents and my kindergarten teacher. On the bright side, I found mathematics and science were my favorite subjects in school. It was my teacher who recommended a potential career in engineering for me. 
+
 The field of engineering encompasses numerous specialties. After some experiences in different engineering, I  eventually narrowed down my choices to physics-related careers, specifically electrical engineering, astrophysics, and computer engineering. It was during high school that I began my journey into coding, with Python being my first programming language. I wrote programs to control Arduino robots, and although they were relatively simple, this experience ignited a clear path in my mind regarding my future engineering pursuits.
  
-
 ## I like coding I want write code for my job
 	Therefore, I didn't choose any engineering major but instead majored in computer science. I want to be a software engineer in the future. As I dive into the career, I understand that writing code is only 30% of my job. The rest 70% consists of communication, collaboration, and other soft skills. Beside improving my coding skills, I also need to learn how to communicate and collaborate with other software engineers.
 	I like to disassemble things related to software engineering? 
