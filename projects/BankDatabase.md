@@ -14,7 +14,7 @@ This is a project that I do in ICS 212. This is a basic bank database system whe
 
 # interface
 The interface is where data is received from the user and interacts with the bank system. For security concerns, this is the only way for users to interact with the database. Users can choose to add, find, delete, quit, or print data that is in the database. 
-<img class="img-fluid" src="../img/vacay/vacay-home-page.png">
+<img class="img-fluid" src="../img/interface.png">
 ```c
 int main(int argc, char *argv[])
 {
