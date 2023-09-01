@@ -12,7 +12,7 @@ labels:
 summary: "An automation script for particular website"
 ---
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+This is a python script I created for my dad to reserve nadmin
 
 To give you a flavor of the game, here is an excerpt from one run:
 
