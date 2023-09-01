@@ -22,12 +22,10 @@ In order to score, the following condition must be satisfied:
 1. The number must be next to each other without a connection
 2. Both number must be 0
 
-# Code
-
 # example
+<img class="img-fluid" src="../img/example.png">
 
-img/example.png
-
+# Code
 To achieve this goal, we use recursive backtracking.
 ```python
 def ProteinFolding(Acidseq, grid, Curnum, y, x, pts, resgrid):
