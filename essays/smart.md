@@ -13,6 +13,7 @@ There are moments in our lives when we must seek assistance from others, particu
 	
 
 In this example, I consider this as a good question to ask because it provides sufficient information for people to figure out his difficulty. The following content is the question: 
+
 ```
 Q: How to implement soft assertions in Cypress and stop execution on failure?
 I installed the cypress-soft-assertions package with npm i -D cypress-soft-assertions.
@@ -24,6 +25,7 @@ validateElementVisibility(element, logMsg) {
 
 https://stackoverflow.com/questions/77044385/how-to-implement-soft-assertions-in-cypress-and-stop-execution-on-failure
 ```
+
 In this question, the user has provided a comprehensive description of the entire process they followed, starting from their initial actions and continuing up to the point where they encountered a problem. This detailed account makes it easier for experts to replicate the code and identify the specific issue. Consequently, the question was answered within a day.
 	
 	
