@@ -30,7 +30,7 @@ In this question, the user has provided a comprehensive description of the entir
 	
 	
 
-Now let’s look as some bad example:
+Now let’s look at a bad example:
 
 ```
 I want to launch Android app with particular activity. Appium have 'start_activity' function, but it's deprecated. Instead of it offered to use 'mobile: startActivity' extension, but I can't understand how. I am newby in coding and realy appreciate any help.
