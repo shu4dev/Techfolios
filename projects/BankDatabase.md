@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/database.png
-title: "Database"
+title: "Bank Database"
 date: 2022
 published: true
 labels:
@@ -60,8 +60,7 @@ int main(int argc, char *argv[])
             printf("Enter one of the option: ");
 ```
 
-img/interface.png
-# record
+# Record
 
 For each record we store in the system, we create a C struct that holds data such as account numbers and names.
 
@@ -76,9 +75,10 @@ struct record
 ```
 
 # Database
+In this database, all the data is stored as Linked List where each record has information such as account number and address and a pointer to another record. This kind of design make the modification of database easier since the system does not need to reallocate memory everytime a new data is entered.
 
-
-After the user enters some data into the interface, the interface will transmit this data to the bank's system. Depending on what the user wants to do, the bank system will execute the corresponding action. For instance, if the user wants to print all the data, the system will execute the following code.
+# Example
+After the user enters some data into the interface, the interface will transfer this data to the bank's system. Depending on what the user wants to do, the bank system will execute the corresponding action. For instance, if the user wants to print all the data, the system will execute the following code.
 
 ```c
 void printAllRecords(struct record *start)
