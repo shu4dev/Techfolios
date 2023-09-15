@@ -114,4 +114,72 @@ def Checkpts(grid, y, x, direc):
             return 0
 ```
 
+# ProteinFolding()
+
+The ProteinFolding is the main function that will plot 0s and 1s on grid and check the score by using recursive backtracking. To explain this function clarly, I will break the function into small portions. 
+
+# set up and base case
+
+This function will take a couple parameters. 
+
+
+1. Acidseq: The protein sequence from input.
+2. Grid: The temporary grid that stores all the 0s and 1s.
+3. Curnum: The current number that the script is plotting.
+4. Y: Vertical position axis of the grid.
+5. X: Horizontal position axis of the grid.
+6. Pts: How many points the script scores.
+7. Resgrid: The result grid.
+
+The function's base case is when the script reach the last 0 or 1 in the sequence. Once it reach it, the function will end.
+
+```python
+def ProteinFolding(Acidseq, grid, Curnum, y, x, pts, resgrid):
+    global Maxpts
+    global y_move
+    global x_move
+    global direc
+    if Curnum == len(Acidseq):
+        if pts > Maxpts:
+            Maxpts = pts
+            CopyArray(grid, resgrid, len(grid))
+        return resgrid
+```
+
+# plotting 
+
+Since the script is folding protein on a 2D grid, for each 1 or 0, there are 4 postion that the script can plot on. (left, right up, or down). To attempt each position, there is a for loop to iterate the portion. 
+
+```python
+ for i in range(4):
+        
+        y_prog = y + y_move[i]
+        x_prog = x + x_move[i]
+        
+        y_new = y_prog + y_move[i]
+        x_new = x_prog + x_move[i]
+
+        
+```
+
+
+After we figure out which position we want to attempt, the script will first check if that is a valid position to plot. If it's not valid, this iteration will end and move on to the next one. If the position is valid, the script will place the current number at the position and check if there are many possible points around it. Finally, the script will call the function again but with the next number.
+
+```python
+            if isValid(grid, y_new, x_new):
+            grid[y_prog][x_prog] = symbol[i]
+            grid[y_new][x_new] = Acidseq[Curnum]
+            pts_new = pts + Checkpts(grid, y_new, x_new, direc[i])
+            CopyArray(resgrid, ProteinFolding(Acidseq, grid, Curnum + 1, y_new, x_new, pts_new, resgrid), len(grid))
+            grid[y_new][x_new] = " "
+            grid[y_prog][x_prog] = " "
+
+    return resgrid
+```
+
+
+# Wrap up
+
+After the script attempts all the possibilities, it will print out one of the best folds that it found. One drawback of this script is that it requires a significantly long time to explore all possibilities. As the input string gets longer and longer, the script will eventually take too much time to produce a result. To address this problem, we can adopt a more efficient algorithm or employ AI to reduce the time spent.
+
 Source: <a href="https://github.com/shu4dev/ProteinFolding"><i class="large github icon "></i>Protein Folding</a>
