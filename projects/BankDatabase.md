@@ -113,7 +113,6 @@ void printAllRecords(struct record *start)
 Additionally, after the user has finished interacting with the database, the database will export all the information stored within it. This ensures that the data from the previous user's session remains available for the next user when they access the database.
 
 # Warp Up
-
 Overall, this database is an illustration of how a data structure can be used in real-world applications. Indeed, there are many different ways, and perhaps better ways, to implement this bank database. However, if we want to implement a database without libraries or external sources, this kind of implementation is the easiest and most effective way to do so, especially when there are many modifying operations in the database.
 
 Source: <a href="https://github.com/shu4dev/BankDatabase"><i class="large github icon "></i>Bank System</a>
