@@ -15,6 +15,8 @@ User interface frameworks change rapidly; new ones emerge every year, and someti
 
 Certainly, there are no strict guidelines for software design, but there are certain features that need to be included for it to be considered as “good” software design.
 
+<img width="300px" class="rounded float-start pe-4" src="../img/learn-or-lose-job-1.jpeg">
+
 ## CONSISTENCY
 
 Let’s talk about Bootstrap first. Essentially, Bootstrap is a collection of CSS properties that can be applied to elements in HTML using classes. Of course, if you want to style the website, you have to use CSS, but Bootstrap organizes it, providing consistency of the website. 
@@ -27,11 +29,15 @@ A responsive web page is a web page that can function properly on any kind of de
 
 To adapt to the rapid development of hardware, a responsive web page is necessary. A UI framework can accomplish this quickly and easily. Especially for front-end development, if the UI is not responsive, it will really be considered a “bad” software because it will have trouble interacting with users. 
 
+<img width="300px" class="rounded float-start pe-4" src="../img/contrast.png">
+
 ## Downside
 
 Of course, there are some downsides to using frameworks. Like I mentioned in the introduction, software developers may have to stay up-to-date with the latest frameworks to secure their jobs. This is difficult not only because it involves learning another programming language, but also understanding the syntax, the logic behind it, and many other things that need to be familiarized with.
 
 It’s fair to say, “That’s what a software engineer looks like.” However, the downsides not only cause trouble for designers but also limit the code itself because using a framework means that your code needs to adhere to some rules, including more or less boilerplate code. On the other hand, you need to upgrade the frameworks and update the legacy code so the web pages can be supported.
+
+<img width="300px" class="rounded float-start pe-4" src="../img/legacycode.jpg">
 
 ## Conclusion
 
