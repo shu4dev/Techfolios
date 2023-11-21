@@ -28,91 +28,48 @@ Perhaps it can generate a good result for smaller applications or functions, and
     - Not use
     - The in-class practice WODs are designed to reflect on what we've learned so far in the past week. Using AI to assist me in this part doesn’t make sense because it won’t be able to identify the mistakes or questions that I still have.   
 
-3. Item 3
-    - Subitem 3.1
-    - Subitem 3.2
-4. Item 4
-    - Subitem 4.1
-    - Subitem 4.2
-5. Item 5
-    - Subitem 5.1
-    - Subitem 5.2
-6. Item 6
-    - Subitem 6.1
-    - Subitem 6.2
-7. Item 7
-    - Subitem 7.1
-    - Subitem 7.2
-8. Item 8
-    - Subitem 8.1
-    - Subitem 8.2
-9. Item 9
-    - Subitem 9.1
-    - Subitem 9.2
-10. Item 10
-    - Subitem 10.1
-    - Subitem 10.2
-11. Item 11
-    - Subitem 11.1
-    - Subitem 11.2
-12. Item 12
-    - Subitem 12.1
-    - Subitem 12.2
-13. Item 13
-    - Subitem 13.1
-    - Subitem 13.2
-14. Item 14
-    - Subitem 14.1
-    - Subitem 14.2
+3. In-class WODs
+    - Not use
+    - I didn’t use AI for this part for the same reason. WODs are usually associated with other materials. Inputting all the materials and asking AI for the desired result usually leads to a faulty outcome, ultimately slowing down the pace of completing my WOD.
 
-3. 
-   - 
-5. In-class WODs
-   - Not use
-   - I didn’t use AI for this part for the same reason. WODs are usually associated with other materials. Inputting all the materials and asking AI for the desired result usually leads to a faulty outcome, ultimately slowing down the pace of completing my WOD.
+4. Essays
+    - use
+    - I use AI for my essays because it is a really good grammar checker for my English. For example, I will write a sentence and add 'fix grammar' at the bottom. Then, I will go through the sentence and make sure it doesn’t change the meaning of it. Using AI for grammar checking is usually reliable because it follows a standard and is usually not ambiguous. Therefore, AI can check and fix my grammar mistakes appropriately.
+      
+5. Final project
+    - Use
+    - I will use AI for my final project as an idea generator when I am stuck on something. For example, I will ask, 'What kind of function can I implement on this particular page?' This will help me generate some ideas that fit well with the specific page that I am working on.
 
-7. 
+6. Learning a concept / tutorial
+    - use
+    - I usually ask ChatGPT, 'Explain XXX concept in simple terms,' and it will reply with a simple analogy so I can understand it. Then, I extend this analogy to a theoretical or conceptual level so that I can comprehend complex ideas in a simpler way.
+      
+7. Answering a question in class or in Discord
+    - Not use
+    - I don’t use AI for this part because the answers from it are usually too general. When I aim to answer a question in class or on Discord, I am looking for a more specific response that brings up new perspectives rather than just general ideas.
+      
+8. Asking or answering a smart-question
+    - Not use
+    - I don’t use AI for this part because the answers from it are usually too general. When I aim to answer a question in class or on Discord, I am looking for a more specific response that brings up new perspectives rather than just general ideas.
+      
+9. Coding example e.g. “give an example of using Underscore .pluck”
+    - use
+    - I use AI a lot for code examples because it is simple enough to produce an example with errors. Moreover, I need numerous examples to ensure that I truly understand how a concept or code works.
+10. Explaining code
+    - use
+    - This is also a pretty good way to use AI. I was having trouble with the Fetch API in JavaScript. I would just paste the code and ask ChatGPT, 'What does this code do?' With the answer it gave me, I would also ask some follow-up questions such as 'So, how does async/await work?' until I am sure that I understand the particular concept thoroughly.
+11. Writing code
+    - Not use
+    - Having AI write the code for me in small applications is fine. However, I usually deal with bigger projects that require many different functions to work with each other. In this case, having AI write the code can cause many issues such as versions, systems, or even conflicts between frameworks.
+12. Documenting code
+    - use
+    - AI is pretty good at understanding input and providing a general comment. Therefore, using AI to document code is usual for me, especially when I am lazy to comment the code line by line again
+13. Quality assurance e.g. “What’s wrong with this code <code here>” or “Fix the ESLint errors in <code here>”
+    - Not use
+    - Quality assurance is usually handled by ESLint, so having AI double-check it doesn’t make sense or prove to be efficient. Moreover, asking AI what’s wrong with my code is also not a good idea since AI probably gives a general explanation of possible errors, which doesn’t solve my bugged code.
+14. Other uses in ICS 314 not listed
+    - In ICS 314, I sometimes ask AI if it has a better solution for WODs. I've noticed that some of the WOD videos were recorded in 2020 or even earlier, which might be outdated. Therefore, asking AI to update the code can keep me up to date with the latest versions of frameworks used nowadays.
   
-
-
-
-
-
-Essays
-use
-I use AI for my essays because it is a really good grammar checker for my English. For example, I will write a sentence and add 'fix grammar' at the bottom. Then, I will go through the sentence and make sure it doesn’t change the meaning of it. Using AI for grammar checking is usually reliable because it follows a standard and is usually not ambiguous. Therefore, AI can check and fix my grammar mistakes appropriately.
-Final project
-Use
-I will use AI for my final project as an idea generator when I am stuck on something. For example, I will ask, 'What kind of function can I implement on this particular page?' This will help me generate some ideas that fit well with the specific page that I am working on.
-Learning a concept / tutorial
-use
-I usually ask ChatGPT, 'Explain XXX concept in simple terms,' and it will reply with a simple analogy so I can understand it. Then, I extend this analogy to a theoretical or conceptual level so that I can comprehend complex ideas in a simpler way.
-Answering a question in class or in Discord
-Not use
-I don’t use AI for this part because the answers from it are usually too general. When I aim to answer a question in class or on Discord, I am looking for a more specific response that brings up new perspectives rather than just general ideas.
-Asking or answering a smart-question
-Not use
-I don’t use AI for this part because the answers from it are usually too general. When I aim to answer a question in class or on Discord, I am looking for a more specific response that brings up new perspectives rather than just general ideas.
-Coding example e.g. “give an example of using Underscore .pluck”
-use
-I use AI a lot for code examples because it is simple enough to produce an example with errors. Moreover, I need numerous examples to ensure that I truly understand how a concept or code works.
-Explaining code
-use
-This is also a pretty good way to use AI. I was having trouble with the Fetch API in JavaScript. I would just paste the code and ask ChatGPT, 'What does this code do?' With the answer it gave me, I would also ask some follow-up questions such as 'So, how does async/await work?' until I am sure that I understand the particular concept thoroughly.
-Writing code
-Not use
-Having AI write the code for me in small applications is fine. However, I usually deal with bigger projects that require many different functions to work with each other. In this case, having AI write the code can cause many issues such as versions, systems, or even conflicts between frameworks.
-Documenting code
-use
-AI is pretty good at understanding input and providing a general comment. Therefore, using AI to document code is usual for me, especially when I am lazy to comment the code line by line again
-Quality assurance e.g. “What’s wrong with this code <code here>” or “Fix the ESLint errors in <code here>”
-Not use
-Quality assurance is usually handled by ESLint, so having AI double-check it doesn’t make sense or prove to be efficient. Moreover, asking AI what’s wrong with my code is also not a good idea since AI probably gives a general explanation of possible errors, which doesn’t solve my bugged code.
-Other uses in ICS 314 not listed
-In ICS 314, I sometimes ask AI if it has a better solution for WODs. I've noticed that some of the WOD videos were recorded in 2020 or even earlier, which might be outdated. Therefore, asking AI to update the code can keep me up to date with the latest versions of frameworks used nowadays.
-
-
-
 ## III. Impact on Learning and Understanding:
 
 I believe all software engineering concepts start with a really simple question, and software engineers elaborate on it, expanding it into a concept. I always use AI as a concept simplifier and example generator that assists me in learning and understanding. It is interesting because the central idea of AI is basically a mathematical model that is trained with thousands and thousands of data points, and that is exactly how I learn. Once I have my central idea, I use AI to provide me with thousands and thousands of data points until I thoroughly learn and understand the concept.
