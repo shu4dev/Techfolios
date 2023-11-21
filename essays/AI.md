@@ -20,15 +20,64 @@ Perhaps it can generate a good result for smaller applications or functions, and
 
 ## II. Personal Experience with AI
 
-Experience WODs e.g. E18
-Not use
-I didn’t use AI for this part because this kind of WOD is usually associated with templates or materials. Assuming AI didn’t have those materials and attempting to solve the problem would usually result in a faulty answer.
-In-class Practice WODs
-Not use
-The in-class practice WODs are designed to reflect on what we've learned so far in the past week. Using AI to assist me in this part doesn’t make sense because it won’t be able to identify the mistakes or questions that I still have.
-In-class WODs
-Not use
-I didn’t use AI for this part for the same reason. WODs are usually associated with other materials. Inputting all the materials and asking AI for the desired result usually leads to a faulty outcome, ultimately slowing down the pace of completing my WOD.
+1. Experience WODs e.g. E18
+    - Not use
+    - I didn’t use AI for this part because this kind of WOD is usually associated with templates or materials. Assuming AI didn’t have those materials and attempting to solve the problem would usually result in a faulty answer.
+
+2. In-class Practice WODs
+    - Not use
+    - The in-class practice WODs are designed to reflect on what we've learned so far in the past week. Using AI to assist me in this part doesn’t make sense because it won’t be able to identify the mistakes or questions that I still have.   
+
+3. Item 3
+    - Subitem 3.1
+    - Subitem 3.2
+4. Item 4
+    - Subitem 4.1
+    - Subitem 4.2
+5. Item 5
+    - Subitem 5.1
+    - Subitem 5.2
+6. Item 6
+    - Subitem 6.1
+    - Subitem 6.2
+7. Item 7
+    - Subitem 7.1
+    - Subitem 7.2
+8. Item 8
+    - Subitem 8.1
+    - Subitem 8.2
+9. Item 9
+    - Subitem 9.1
+    - Subitem 9.2
+10. Item 10
+    - Subitem 10.1
+    - Subitem 10.2
+11. Item 11
+    - Subitem 11.1
+    - Subitem 11.2
+12. Item 12
+    - Subitem 12.1
+    - Subitem 12.2
+13. Item 13
+    - Subitem 13.1
+    - Subitem 13.2
+14. Item 14
+    - Subitem 14.1
+    - Subitem 14.2
+
+3. 
+   - 
+5. In-class WODs
+   - Not use
+   - I didn’t use AI for this part for the same reason. WODs are usually associated with other materials. Inputting all the materials and asking AI for the desired result usually leads to a faulty outcome, ultimately slowing down the pace of completing my WOD.
+
+7. 
+  
+
+
+
+
+
 Essays
 use
 I use AI for my essays because it is a really good grammar checker for my English. For example, I will write a sentence and add 'fix grammar' at the bottom. Then, I will go through the sentence and make sure it doesn’t change the meaning of it. Using AI for grammar checking is usually reliable because it follows a standard and is usually not ambiguous. Therefore, AI can check and fix my grammar mistakes appropriately.
