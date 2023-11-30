@@ -12,7 +12,7 @@ labels:
 ---
 ## Treasure Map
 
-<img width="300px" class="image-fluid" src="../img/.png">
+<img width="300px" class="image-fluid" src="../img/Treasure_Map.jpeg">
 
 Where is the treasure? Well, obviously, it's at the 'X' mark on the treasure map. All you need to do is follow the route on the map, and you can find the treasure! 
 Isn’t that similar to a design pattern? One of the coolest features of React.js is its rendering capability, which makes React.js truly 'reactive.' 
