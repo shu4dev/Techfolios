@@ -27,7 +27,7 @@ If you're a computer science student, you've likely heard of an operating system
 
 Imagine if all software were not open source; how hard would it be to simply create a website? How much money would you need to pay for the resources to build software? Thanks to the open-source attribute, I can add cool features like a QR code feature in my final projects. I can store my data in a database without actually owning one, all thanks to the open-source attribute. I hope all software engineers can continue maintaining the attitude of open sources so we can all improve together.
 
-<img width="300px" class="image-fluid" src="../img/learn-or-lose-job-1.jpeg">
+<img width="300px" class="image-fluid" src="../img/OpenSource.jpg">
 
 ## Agile Project Management
 
@@ -35,7 +35,7 @@ Project management might be the most critical distinction between software engin
 
 I acknowledge that project management is truly beneficial for managing a project, but I believe we should have more freedom in it, including the structure of the projects or even the matter of branch naming. For instance, instead of naming it 'issue-xx,' we can use more intuitive names like 'SetupDataBase' or 'Fix-SearchPage.' In the future, I anticipate experiencing various project management strategies with different structures or standards. However, the core idea remains the same: using this as a communication tool to overcome factors such as time zones or language barriers. Despite these difficulties, all members in the group can still effectively communicate and ensure that the project is on the right track.
 
-<img width="300px" class="image-fluid" src="../img/contrast.png">
+<img width="300px" class="image-fluid" src="../img/weekend.jpg">
 
 ## Ethics in Software Engineering
 
@@ -45,14 +45,8 @@ What I'm trying to illustrate here is that a computer is essentially dumb; it la
 
 While there are instances where we can't limit our software, we should still provide warnings to users about potential risks. A prime example is commercial applications. If the product being promoted through our application is hazardous, the software should alert users about the potential risks associated with that product before they consider purchasing it.
 
-<img width="300px" class="image-fluid" src="../img/legacycode.jpg">
+<img width="300px" class="image-fluid" src="../img/ethic.jpg">
 
 ## Conclusion
-
-I can't stress this enough: software engineering isn't solely about coding. It's a psychological subject that demands consideration not only of human interaction during software production but also the purpose behind that software. Surprisingly, this is the most vital lesson I've learned from this class, and it's a value I'll carry with me into any software engineering career I pursue in the future.
-
-
-
-##Conclusion
 
 I can't stress this enough: software engineering isn't solely about coding. It's a psychological subject that demands consideration not only of human interaction during software production but also the purpose behind that software. Surprisingly, this is the most vital lesson I've learned from this class, and it's a value I'll carry with me into any software engineering career I pursue in the future.
