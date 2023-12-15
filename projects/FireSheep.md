@@ -28,14 +28,17 @@ This project provides user-friendly interface that allow user to naviagete our w
 # User Registration and Authentication 
 
 Users can create accounts, log in securely, and manage their profiles. Personal information and borrowing history can be securely stored.
+
 <img width="300px" class="image-fluid" src="../img/Login.png">
 
 # Browse and Select Items 
 The application will showcase available containers and utensils, displaying details such as types, sizes, and availability. Users can browse through the inventory and select items for borrowing.
+
 <img width="300px" class="image-fluid" src="../img/Order.png">
 
 ## Administrative Panel
 An admin interface to manage inventory, track borrowed items, handle user accounts, and generate reports on usage and item popularity.
+
 <img width="300px" class="image-fluid" src="../img/Search.png">
 
 <hr>
