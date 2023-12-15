@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/seleniumlogo.png
+image: img/FireSheep-FCTWhite.png
 title: "Website Automation"
 date: 2023
 published: true
@@ -28,15 +28,15 @@ This project provides user-friendly interface that allow user to naviagete our w
 # User Registration and Authentication 
 
 Users can create accounts, log in securely, and manage their profiles. Personal information and borrowing history can be securely stored.
-<img class="img-fluid" src="../img/interface.png">
+<img width="300px" class="image-fluid" src="../img/Login.png">
 
 # Browse and Select Items 
 The application will showcase available containers and utensils, displaying details such as types, sizes, and availability. Users can browse through the inventory and select items for borrowing.
-<img class="img-fluid" src="../img/interface.png">
+<img width="300px" class="image-fluid" src="../img/Order.png">
 
 ## Administrative Panel
 An admin interface to manage inventory, track borrowed items, handle user accounts, and generate reports on usage and item popularity.
-<img class="img-fluid" src="../img/interface.png">
+<img width="300px" class="image-fluid" src="../img/Search.png">
 
 <hr>
 
@@ -57,9 +57,6 @@ Joy Tan<br>
 <hr>
 
 ## What do we learned ?
+Throughout this project, our learning extended far beyond the technical aspects of developing a web application. While mastering the use of diverse frameworks was undoubtedly valuable, the most significant lessons stemmed from the realms of communication, teamwork, project management, and issue resolution. Collaborating on this endeavor honed our abilities to articulate ideas effectively, ensuring seamless communication among team members. Emphasizing teamwork, we discovered the power of collective effort, leveraging everyone's strengths to achieve our common goals. Learning to manage a project from conception to execution taught us invaluable organizational skills, including task delegation, timeline adherence, and resource management. Most importantly, encountering and resolving challenges within the project enriched our problem-solving abilities and fostered adaptability in navigating unforeseen obstacles. In essence, this experience transcended technical skill acquisition, equipping us with indispensable soft skills vital for success in any collaborative endeavor.
 
-
-
-
-
-Source: <a href="https://github.com/shu4dev/WebAutomation/edit/main/BotDemo.py"><i class="large github icon "></i>WebAutomation</a>
+Source: <a href="https://314firesheep.github.io/)https://314firesheep.github.io/">Organization GitHub Page</a>
