@@ -28,7 +28,8 @@
       "studyType": "B.S.",
       "startDate": "2022-08-22",
       "endDate": "Present",
-      "courses": [ "ICS 314 Software Engineering", "ICS 311 Algorithms"
+      "courses": [ "ICS 314 Software Engineering", "ICS 311 Algorithms", 
+                    "ICS 435 Machine Learning Fundamentals", "ICS 491 Blockchain Cryptocurrency (special topics)"
       ]
     }
   ],
@@ -62,7 +63,7 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Python", "Selenium", "WebDriver"]
+      "keywords": [ "JavaScript", "React.js", "Boostrap", "Meteor.js", "Node.js / Express.js", "C", "C++", "Java", "Python", "Selenium", "WebDriver"]
     },
     {
       "name": "Toolsets/OS",
