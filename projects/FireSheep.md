@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/FireSheep-FCTWhite.png
-title: "Website Automation"
+title: "Full Cycle TakeOut"
 date: 2023
 published: true
 labels:
