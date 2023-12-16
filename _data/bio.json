@@ -1,0 +1,78 @@
+{
+  "basics": {
+    "name": "Chien Hua (Brian) Shu",
+    "label": "Student",
+    "picture": "https://github.com/shu4dev.png",
+    "email": "shu4@hawaii.edu",
+    "phone": "808-391-6387",
+    "website": "https://shu4dev.github.io/",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2026.",
+    "location": { "address": "", "postalCode": "96813", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "shu4dev", "url": "https://github.com/shu4dev" },
+      { "network": "linkedin", "username": "Brian Shu", "url": "https://www.linkedin.com/in/chien-hua-shu-1bb75b251/" },
+      { "network": "instagram", "username": "Brian", "url": "https://instagram.com/lilium_brownii.v?igshid=MjEwN2IyYWYwYw==" }
+    ]
+  },
+  "interests": [
+    { "name": "Video Games" },
+    { "name": "Artificial Intelligence" },
+    { "name": "Machine Learning" },
+    { "name": "Basketball" },
+    { "name": "East Asian languages" },
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2026)",
+      "studyType": "B.S.",
+      "startDate": "2022-08-22",
+      "endDate": "Present",
+      "courses": [ "ICS 314 Software Engineering", "ICS 311 Algorithms", 
+                    "ICS 435 Machine Learning Fundamentals", "ICS 491 Blockchain Cryptocurrency (special topics)"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "University of Hawaii at Manoa",
+      "position": "Reserch Asistant",
+      "website": "",
+      "startDate": "2023/6/1",
+      "endDate": "Present",
+      "highlights": [
+        "Create algorithm for biological reaction",
+        "Discuss and improve our algorithm by using various computer concept",
+        "Host and execute reaserch result on offical website"
+      ]
+    },
+  ],
+ "volunteer": [
+    {
+      "organization": "PANDA (Programming AND Algorithms)",
+      "website": "https://acmmanoa.org/panda/",
+      "position": "Officer",
+      "startDate": "2023-08-22",
+      "endDate": "Present",
+      "highlights": [
+        "Worked among members to generate solutions and the potential optimization by using various data structures.",
+        "Applied and further optimized solutions with the characteristics of different programming languages."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "JavaScript", "React.js", "Boostrap", "Meteor.js", "Node.js / Express.js", "C", "C++", "Java", "Python", "Selenium", "WebDriver"]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "MacOS", "Git/GitHub", "gcc/g++", "Windows 11/10", "Unix", "Vim", "Eclipse", "VScode" ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

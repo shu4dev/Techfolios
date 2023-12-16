@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Bank Database | Brian Shu | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/shu4dev.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brian Shu | Professional Portfolio">
+    <meta property="og:url" content="https://shu4dev.github.io/projects/BankDatabase.html">
+    <meta property="og:title" content="Bank Database | Brian Shu | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/shu4dev.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Bank Database | Brian Shu | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Chien Hua (Brian) Shu</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Bank Database</h1>
+ <h1 id="introduction">Introduction</h1>
+<p>This is a project that I do in ICS 212. This is a basic bank database system where user can enter data such as name, address, and account number to interact with the bank system.</p>
+
+<h1 id="interface">interface</h1>
+<p>The interface is where data is received from the user and interacts with the bank system. For security concerns, this is the only way for users to interact with the database. Users can choose to add, find, delete, quit, or print data that is in the database. 
+<img class="img-fluid" src="../img/interface.png" /></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">temp</span><span class="p">[</span><span class="mi">80</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">address</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">user_input</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">EndOfLoop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">check</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">AccountNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">record</span> <span class="o">*</span><span class="n">start</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"debug"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">debugmode</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">check</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">check</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">check</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">readfile</span><span class="p">(</span><span class="o">&amp;</span><span class="n">start</span><span class="p">,</span> <span class="s">"database.txt"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">Aloha, welome to Aloha bank this program is designed"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"to interact with database</span><span class="se">\n\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="k">do</span>
+        <span class="p">{</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n\n</span><span class="s">Please select one of the options from the menu</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">add:      To add a new record in the database</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">printall: To print all records in the database</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">find:     Find record(s) with a specified account number</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">delete:   To delete existing record(s) from the database using"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">          the account number as a key</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">quit:     Quit the program</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"Enter one of the option: "</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="record">Record</h1>
+
+<p>For each record we store in the system, we create a C struct that holds data such as account numbers and names.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">record</span>
+<span class="p">{</span>
+    <span class="kt">int</span>            <span class="n">accountno</span><span class="p">;</span>
+    <span class="kt">char</span>           <span class="n">name</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+    <span class="kt">char</span>           <span class="n">address</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="n">record</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="database">Database</h1>
+<p>In this database, all the data is stored as Linked List where each record has information such as account number and address and a pointer to another record. This kind of design make the modification of database easier since the system does not need to reallocate memory everytime a new data is entered.</p>
+
+<h1 id="example">Example</h1>
+<p>After the user enters some data into the interface, the interface will transfer this data to the bank’s system. Depending on what the user wants to do, the bank system will execute the corresponding action. For instance, if the user wants to print all the data, the system will execute the following code.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">printAllRecords</span><span class="p">(</span><span class="k">struct</span> <span class="n">record</span> <span class="o">*</span><span class="n">start</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">record</span> <span class="o">*</span><span class="n">PointerRecord</span><span class="p">;</span>
+    <span class="n">PointerRecord</span> <span class="o">=</span> <span class="n">start</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">PointerRecord</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">The account number is : %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">PointerRecord</span><span class="o">-&gt;</span><span class="n">accountno</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"The name is : %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">PointerRecord</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"The address is : %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">PointerRecord</span><span class="o">-&gt;</span><span class="n">address</span><span class="p">);</span>
+        <span class="n">PointerRecord</span> <span class="o">=</span> <span class="n">PointerRecord</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"NO record in the database yet</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">debugmode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n\n</span><span class="s">called printAllRecords</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"the function has parameter struct record *start</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"the loop run %d times </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Additionally, after the user has finished interacting with the database, the database will export all the information stored within it. This ensures that the data from the previous user’s session remains available for the next user when they access the database.</p>
+
+<h1 id="warp-up">Warp Up</h1>
+<p>Overall, this database is an illustration of how a data structure can be used in real-world applications. Indeed, there are many different ways, and perhaps better ways, to implement this bank database. However, if we want to implement a database without libraries or external sources, this kind of implementation is the easiest and most effective way to do so, especially when there are many modifying operations in the database.</p>
+
+<p>Source: <a href="https://github.com/shu4dev/BankDatabase"><i class="large github icon "></i>Bank System</a></p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

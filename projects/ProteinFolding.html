@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Protein Folding | Brian Shu | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/shu4dev.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brian Shu | Professional Portfolio">
+    <meta property="og:url" content="https://shu4dev.github.io/projects/ProteinFolding.html">
+    <meta property="og:title" content="Protein Folding | Brian Shu | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/shu4dev.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Protein Folding | Brian Shu | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Chien Hua (Brian) Shu</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Protein Folding</h1>
+ <hr />
+
+<h1 id="introduction">Introduction</h1>
+<p>This Python script is dedicated to a research project during the summer. The goal of this project is to find the best way to fold proteins using a hydrophobic-polar protein folding model. The concept of the “best way” refers to a method for transforming a string into 2D or 3D shapes that best satisfy the criteria of hydrophobic-polar protein folding.</p>
+
+<hr />
+
+<h1 id="hydrophobic-polar-protein-folding-model">hydrophobic-polar protein folding model</h1>
+
+<p>The hydrophobic-polar protein folding model is a highly simplified model for examining protein folds in space, first proposed by Ken Dill in 1985. In this model, a protein is represented as a string containing 1s and 0s. Between each 1 or 0, there is a connection point where the protein can be folded.</p>
+
+<p>In order to score, the following condition must be satisfied:</p>
+
+<ol>
+  <li>The number must be next to each other without a connection</li>
+  <li>Both number must be 0</li>
+</ol>
+
+<p>To Better illustrate this idea, Let’s take a look at a example</p>
+
+<h1 id="example">example</h1>
+
+<p>Given the input is [0, 0, 0, 0, 0, 0, 0, 0], the script will produce:</p>
+
+<p><img class="img-fluid" src="../img/example.png" /></p>
+
+<p>One of the best ways to fold the protein is in the image. As you can see, this 2D shape scores 3 because there are 3 pairs of 0 next to each other without connection (arrow).</p>
+
+<h1 id="method">method</h1>
+
+<p>To achieve this goal, we utilize recursive backtracking. First, we choose the very first number in the input and place it in an arbitrary position on the grid. Then, we use a for loop to check the positions around the first number. We place the second number in the first valid position we find, and we continue this process. When the script encounters a situation where there are no valid positions, it will recurse and move to the next valid position. The script will terminate when all the numbers have been placed on the grid or when there is no available space for any more numbers.</p>
+
+<h1 id="code">Code</h1>
+
+<p>Before I introduce the main part of the script, I would like to first introduce some helper fuction.</p>
+
+<h1 id="isvalid">isValid()</h1>
+
+<p>This function simply checks if the block on the grid is occupied or not.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="s">" "</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+</code></pre></div></div>
+
+<h1 id="checkpts">Checkpts()</h1>
+
+<p>As we are plotting the 1s and 0s, this function checks if there are any scores around the current 1s or 0s that we are plotting.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Checkpts</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">direc</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">direc</span> <span class="o">==</span> <span class="s">"R"</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">direc</span> <span class="o">==</span> <span class="s">"L"</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span>  <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">direc</span> <span class="o">==</span> <span class="s">"U"</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">direc</span> <span class="o">==</span> <span class="s">"D"</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="k">return</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<h1 id="proteinfolding">ProteinFolding()</h1>
+
+<p>The ProteinFolding is the main function that will plot 0s and 1s on grid and check the score by using recursive backtracking. To explain this function clarly, I will break the function into small portions.</p>
+
+<h1 id="set-up-and-base-case">set up and base case</h1>
+
+<p>This function will take a couple parameters.</p>
+
+<ol>
+  <li>Acidseq: The protein sequence from input.</li>
+  <li>Grid: The temporary grid that stores all the 0s and 1s.</li>
+  <li>Curnum: The current number that the script is plotting.</li>
+  <li>Y: Vertical position axis of the grid.</li>
+  <li>X: Horizontal position axis of the grid.</li>
+  <li>Pts: How many points the script scores.</li>
+  <li>Resgrid: The result grid.</li>
+</ol>
+
+<p>The function’s base case is when the script reach the last 0 or 1 in the sequence. Once it reach it, the function will end.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ProteinFolding</span><span class="p">(</span><span class="n">Acidseq</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">Curnum</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">resgrid</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">Maxpts</span>
+    <span class="k">global</span> <span class="n">y_move</span>
+    <span class="k">global</span> <span class="n">x_move</span>
+    <span class="k">global</span> <span class="n">direc</span>
+    <span class="k">if</span> <span class="n">Curnum</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">Acidseq</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pts</span> <span class="o">&gt;</span> <span class="n">Maxpts</span><span class="p">:</span>
+            <span class="n">Maxpts</span> <span class="o">=</span> <span class="n">pts</span>
+            <span class="n">CopyArray</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">resgrid</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">resgrid</span>
+</code></pre></div></div>
+
+<h1 id="plotting">plotting</h1>
+
+<p>Since the script is folding protein on a 2D grid, for each 1 or 0, there are 4 postion that the script can plot on. (left, right up, or down). To attempt each position, there is a for loop to iterate the portion.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        
+        <span class="n">y_prog</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y_move</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">x_prog</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x_move</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="n">y_new</span> <span class="o">=</span> <span class="n">y_prog</span> <span class="o">+</span> <span class="n">y_move</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">x_new</span> <span class="o">=</span> <span class="n">x_prog</span> <span class="o">+</span> <span class="n">x_move</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        
+</code></pre></div></div>
+
+<p>After we figure out which position we want to attempt, the script will first check if that is a valid position to plot. If it’s not valid, this iteration will end and move on to the next one. If the position is valid, the script will place the current number at the position and check if there are many possible points around it. Finally, the script will call the function again but with the next number.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            <span class="k">if</span> <span class="n">isValid</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">y_new</span><span class="p">,</span> <span class="n">x_new</span><span class="p">):</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">y_prog</span><span class="p">][</span><span class="n">x_prog</span><span class="p">]</span> <span class="o">=</span> <span class="n">symbol</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">y_new</span><span class="p">][</span><span class="n">x_new</span><span class="p">]</span> <span class="o">=</span> <span class="n">Acidseq</span><span class="p">[</span><span class="n">Curnum</span><span class="p">]</span>
+            <span class="n">pts_new</span> <span class="o">=</span> <span class="n">pts</span> <span class="o">+</span> <span class="n">Checkpts</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">y_new</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">direc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">CopyArray</span><span class="p">(</span><span class="n">resgrid</span><span class="p">,</span> <span class="n">ProteinFolding</span><span class="p">(</span><span class="n">Acidseq</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">Curnum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y_new</span><span class="p">,</span> <span class="n">x_new</span><span class="p">,</span> <span class="n">pts_new</span><span class="p">,</span> <span class="n">resgrid</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">))</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">y_new</span><span class="p">][</span><span class="n">x_new</span><span class="p">]</span> <span class="o">=</span> <span class="s">" "</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">y_prog</span><span class="p">][</span><span class="n">x_prog</span><span class="p">]</span> <span class="o">=</span> <span class="s">" "</span>
+
+    <span class="k">return</span> <span class="n">resgrid</span>
+</code></pre></div></div>
+
+<h1 id="wrap-up">Wrap up</h1>
+
+<p>After the script attempts all the possibilities, it will print out one of the best folds that it found. One drawback of this script is that it requires a significantly long time to explore all possibilities. As the input string gets longer and longer, the script will eventually take too much time to produce a result. To address this problem, we can adopt a more efficient algorithm or employ AI to reduce the time spent.</p>
+
+<p>Source: <a href="https://github.com/shu4dev/ProteinFolding"><i class="large github icon "></i>Protein Folding</a></p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
